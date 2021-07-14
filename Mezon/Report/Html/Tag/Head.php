@@ -5,7 +5,7 @@ use Mezon\Report\Html\AddTrait;
 use Mezon\Report\Html\Tag;
 
 /**
- * Class Body
+ * Class Head
  *
  * @package Mezon
  * @subpackage HtmlReport
@@ -15,18 +15,18 @@ use Mezon\Report\Html\Tag;
  */
 
 /**
- * Body element generator
+ * Head element generator
  */
-class Body extends Tag
+class Head extends Tag
 {
 
-    use AddTrait\Table, AddTrait\InnerHtml, AddTrait\Div, AddTrait\P, AddTrait\Strong;
+    use AddTrait\Style;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        parent::__construct('body');
+        parent::__construct('head');
     }
 }

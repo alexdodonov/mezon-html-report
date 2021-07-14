@@ -5,28 +5,27 @@ use Mezon\Report\Html\AddTrait;
 use Mezon\Report\Html\Tag;
 
 /**
- * Class Body
+ * Class Strong
  *
  * @package Mezon
  * @subpackage HtmlReport
  * @author Dodonov A.A.
- * @version v.1.0 (2021/06/25)
+ * @version v.1.0 (2021/07/12)
  * @copyright Copyright (c) 2021, aeon.org
  */
 
 /**
- * Body element generator
+ * Strong element generator
  */
-class Body extends Tag
+class Strong extends Tag
 {
-
-    use AddTrait\Table, AddTrait\InnerHtml, AddTrait\Div, AddTrait\P, AddTrait\Strong;
+    use AddTrait\InnerHtml, AddTrait\Div, AddTrait\P, AddTrait\Strong;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        parent::__construct('body');
+        parent::__construct('strong');
     }
 }

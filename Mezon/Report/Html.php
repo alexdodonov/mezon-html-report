@@ -2,6 +2,7 @@
 namespace Mezon\Report;
 
 use Mezon\Report\Html\Tag\Body;
+use Mezon\Report\Html\Tag\Head;
 
 /**
  * Class Html
@@ -27,9 +28,16 @@ class Html implements ReportInterface
     private $body = null;
 
     /**
+     * Head element
+     *
+     * @var Head
+     */
+    private $head = null;
+
+    /**
      * Method returns body element of the HTML report
      *
-     * @return Body
+     * @return Body tag
      */
     public function body(): Body
     {
@@ -38,6 +46,20 @@ class Html implements ReportInterface
         }
 
         return $this->body;
+    }
+
+    /**
+     * Method return head tag
+     *
+     * @return Head tag
+     */
+    public function head(): Head
+    {
+        if ($this->head === null) {
+            $this->head = new Head();
+        }
+
+        return $this->head;
     }
 
     /**
@@ -51,6 +73,6 @@ class Html implements ReportInterface
             throw (new \Exception('You are trying to generate empty report', - 1));
         }
 
-        return '<html>' . $this->body->compile() . '</html>';
+        return '<html>' . ($this->head === null ? '' : $this->head()->compile()) . $this->body->compile() . '</html>';
     }
 }

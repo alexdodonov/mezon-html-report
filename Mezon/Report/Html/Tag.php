@@ -30,7 +30,7 @@ class Tag extends ElementsArray implements CompilatorInterface
     /**
      * Constructor
      *
-     * @param string $tagName
+     * @param string $tagName tag name
      */
     public function __construct(string $tagName)
     {
