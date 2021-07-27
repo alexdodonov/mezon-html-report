@@ -20,7 +20,7 @@ use Mezon\Report\Html\Tag;
 class Td extends Tag
 {
 
-    use AddTrait\InnerHtml, AddTrait\Div, AddTrait\P, AddTrait\Strong;
+    use AddTrait\InnerHtml, AddTrait\Div, AddTrait\P, AddTrait\Strong, AddTrait\H1, AddTrait\H2, AddTrait\H3, AddTrait\H4, AddTrait\H5;
 
     /**
      * Constructor

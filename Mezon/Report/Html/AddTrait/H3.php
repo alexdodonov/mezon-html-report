@@ -5,7 +5,7 @@ use Mezon\Report\CompilatorInterface;
 use Mezon\Report\Html\Tag;
 
 /**
- * Trait Div
+ * Trait H3
  *
  * @package Mezon
  * @subpackage HtmlReport
@@ -15,9 +15,9 @@ use Mezon\Report\Html\Tag;
  */
 
 /**
- * Div creator trait
+ * H3 creator trait
  */
-trait Div
+trait H3
 {
 
     /**
@@ -29,16 +29,16 @@ trait Div
     protected abstract function addElement(CompilatorInterface $element);
 
     /**
-     * Method adds 'div' tag to the parent element
+     * Method adds 'h3' tag to the parent element
      *
-     * @return Tag\Div 'div' tag
+     * @return Tag\H3 'h3' tag
      */
-    public function div(): Tag\Div
+    public function h3(): Tag\H3
     {
-        $div = new Tag\Div();
+        $h3 = new Tag\H3();
 
-        $this->addElement($div);
+        $this->addElement($h3);
 
-        return $div;
+        return $h3;
     }
 }
