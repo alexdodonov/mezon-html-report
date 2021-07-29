@@ -22,10 +22,36 @@ class Div extends Tag
     use AddTrait\InnerHtml, AddTrait\Div, AddTrait\P, AddTrait\Strong, AddTrait\H1, AddTrait\H2, AddTrait\H3, AddTrait\H4, AddTrait\H5;
 
     /**
-     * Constructor
+     * Text
+     *
+     * @var string
      */
-    public function __construct()
+    private $text = '';
+
+    /**
+     * Constructor
+     *
+     * @param string $text
+     *            inner text
+     */
+    public function __construct(string $text = '')
     {
         parent::__construct('div');
+
+        $this->text = $text;
+    }
+
+    /**
+     *
+     * {@inheritdoc}
+     * @see \Mezon\Report\CompilatorInterface::compile()
+     */
+    public function compile(): string
+    {
+        if ($this->text === '') {
+            return parent::compile();
+        } else {
+            return '<div>' . $this->text . '</div>';
+        }
     }
 }

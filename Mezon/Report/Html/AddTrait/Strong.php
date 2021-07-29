@@ -31,11 +31,13 @@ trait Strong
     /**
      * Method adds 'strong' tag to the parent element
      *
+     * @param string $text
+     *            inner text
      * @return Tag\Strong 'strong' tag
      */
-    public function strong(): Tag\Strong
+    public function strong(string $text = ''): Tag\Strong
     {
-        $strong = new Tag\Strong();
+        $strong = new Tag\Strong($text);
 
         $this->addElement($strong);
 

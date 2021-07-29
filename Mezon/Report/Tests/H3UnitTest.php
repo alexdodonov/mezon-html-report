@@ -92,4 +92,19 @@ class H3UnitTest extends TestCase
         // assertions
         $this->assertEquals('<html><body><div><h3></h3></div></body></html>', $htmlReport->compile());
     }
+
+    /**
+     * Testing additing tag with inner text
+     */
+    public function testAddTagWithText(): void
+    {
+        // setup
+        $htmlReport = new Html();
+
+        // test body
+        $htmlReport->body()->h3('s');
+
+        // assertions
+        $this->assertEquals('<html><body><h3>s</h3></body></html>', $htmlReport->compile());
+    }
 }

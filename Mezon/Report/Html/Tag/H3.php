@@ -22,10 +22,36 @@ class H3 extends Tag
     use AddTrait\InnerHtml, AddTrait\Div, AddTrait\P, AddTrait\Strong;
 
     /**
-     * Constructor
+     * Text
+     *
+     * @var string
      */
-    public function __construct()
+    private $text = '';
+
+    /**
+     * Constructor
+     *
+     * @param string $text
+     *            inner text
+     */
+    public function __construct(string $text = '')
     {
         parent::__construct('h3');
+
+        $this->text = $text;
+    }
+
+    /**
+     *
+     * {@inheritdoc}
+     * @see \Mezon\Report\CompilatorInterface::compile()
+     */
+    public function compile(): string
+    {
+        if ($this->text === '') {
+            return parent::compile();
+        } else {
+            return '<h3>' . $this->text . '</h3>';
+        }
     }
 }

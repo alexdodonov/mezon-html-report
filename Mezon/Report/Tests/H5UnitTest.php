@@ -92,4 +92,19 @@ class H5UnitTest extends TestCase
         // assertions
         $this->assertEquals('<html><body><div><h5></h5></div></body></html>', $htmlReport->compile());
     }
+
+    /**
+     * Testing additing tag with inner text
+     */
+    public function testAddTagWithText(): void
+    {
+        // setup
+        $htmlReport = new Html();
+
+        // test body
+        $htmlReport->body()->h5('s');
+
+        // assertions
+        $this->assertEquals('<html><body><h5>s</h5></body></html>', $htmlReport->compile());
+    }
 }

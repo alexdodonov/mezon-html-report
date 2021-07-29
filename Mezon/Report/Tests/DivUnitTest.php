@@ -71,7 +71,9 @@ class DivUnitTest extends TestCase
             ->div();
 
         // assertions
-        $this->assertEquals('<html><body><table><tr><td><div></div></td></tr></table></body></html>', $htmlReport->compile());
+        $this->assertEquals(
+            '<html><body><table><tr><td><div></div></td></tr></table></body></html>',
+            $htmlReport->compile());
     }
 
     /**
@@ -89,5 +91,20 @@ class DivUnitTest extends TestCase
 
         // assertions
         $this->assertEquals('<html><body><div><div></div></div></body></html>', $htmlReport->compile());
+    }
+
+    /**
+     * Testing additing tag with inner text
+     */
+    public function testAddTagWithText(): void
+    {
+        // setup
+        $htmlReport = new Html();
+
+        // test body
+        $htmlReport->body()->div('s');
+
+        // assertions
+        $this->assertEquals('<html><body><div>s</div></body></html>', $htmlReport->compile());
     }
 }

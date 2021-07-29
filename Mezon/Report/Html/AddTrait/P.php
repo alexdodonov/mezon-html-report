@@ -31,11 +31,12 @@ trait P
     /**
      * Method adds 'p' tag to the parent element
      *
+     * @param string $text inner text
      * @return Tag\P 'p' tag
      */
-    public function p(): Tag\P
+    public function p(string $text = ''): Tag\P
     {
-        $p = new Tag\P();
+        $p = new Tag\P($text);
 
         $this->addElement($p);
 

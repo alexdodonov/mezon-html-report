@@ -90,4 +90,19 @@ class PUnitTest extends TestCase
         // assertions
         $this->assertEquals('<html><body><div><p></p></div></body></html>', $htmlReport->compile());
     }
+
+    /**
+     * Testing additing tag with inner text
+     */
+    public function testAddTagWithText(): void
+    {
+        // setup
+        $htmlReport = new Html();
+
+        // test body
+        $htmlReport->body()->p('s');
+
+        // assertions
+        $this->assertEquals('<html><body><p>s</p></body></html>', $htmlReport->compile());
+    }
 }

@@ -31,11 +31,13 @@ trait H1
     /**
      * Method adds 'h1' tag to the parent element
      *
+     * @param string $text
+     *            inner text
      * @return Tag\H1 'h1' tag
      */
-    public function h1(): Tag\H1
+    public function h1(string $text = ''): Tag\H1
     {
-        $h1 = new Tag\H1();
+        $h1 = new Tag\H1($text);
 
         $this->addElement($h1);
 

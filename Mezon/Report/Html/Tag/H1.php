@@ -23,9 +23,28 @@ class H1 extends Tag
 
     /**
      * Constructor
+     *
+     * @param string $text
+     *            inner text
      */
-    public function __construct()
+    public function __construct(string $text = '')
     {
         parent::__construct('h1');
+
+        $this->text = $text;
+    }
+
+    /**
+     *
+     * {@inheritdoc}
+     * @see \Mezon\Report\CompilatorInterface::compile()
+     */
+    public function compile(): string
+    {
+        if ($this->text === '') {
+            return parent::compile();
+        } else {
+            return '<h1>' . $this->text . '</h1>';
+        }
     }
 }

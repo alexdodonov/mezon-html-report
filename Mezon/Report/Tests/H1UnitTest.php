@@ -48,7 +48,7 @@ class H1UnitTest extends TestCase
 
         // test body
         $htmlReport->body()
-        ->h1()
+            ->h1()
             ->innerHtml('<span></span>');
 
         // assertions
@@ -71,7 +71,9 @@ class H1UnitTest extends TestCase
             ->h1();
 
         // assertions
-        $this->assertEquals('<html><body><table><tr><td><h1></h1></td></tr></table></body></html>', $htmlReport->compile());
+        $this->assertEquals(
+            '<html><body><table><tr><td><h1></h1></td></tr></table></body></html>',
+            $htmlReport->compile());
     }
 
     /**
@@ -89,5 +91,20 @@ class H1UnitTest extends TestCase
 
         // assertions
         $this->assertEquals('<html><body><div><h1></h1></div></body></html>', $htmlReport->compile());
+    }
+
+    /**
+     * Testing additing tag with inner text
+     */
+    public function testAddTagWithText(): void
+    {
+        // setup
+        $htmlReport = new Html();
+
+        // test body
+        $htmlReport->body()->h1('s');
+
+        // assertions
+        $this->assertEquals('<html><body><h1>s</h1></body></html>', $htmlReport->compile());
     }
 }

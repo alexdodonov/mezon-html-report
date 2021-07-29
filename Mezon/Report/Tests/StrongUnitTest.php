@@ -71,7 +71,9 @@ class StrongUnitTest extends TestCase
             ->strong();
 
         // assertions
-        $this->assertEquals('<html><body><table><tr><td><strong></strong></td></tr></table></body></html>', $htmlReport->compile());
+        $this->assertEquals(
+            '<html><body><table><tr><td><strong></strong></td></tr></table></body></html>',
+            $htmlReport->compile());
     }
 
     /**
@@ -107,7 +109,7 @@ class StrongUnitTest extends TestCase
         // assertions
         $this->assertEquals('<html><body><p><strong></strong></p></body></html>', $htmlReport->compile());
     }
-    
+
     /**
      * Testing additing strong in strong tag
      */
@@ -115,13 +117,28 @@ class StrongUnitTest extends TestCase
     {
         // setup
         $htmlReport = new Html();
-        
+
         // test body
         $htmlReport->body()
-        ->strong()
-        ->strong();
-        
+            ->strong()
+            ->strong();
+
         // assertions
         $this->assertEquals('<html><body><strong><strong></strong></strong></body></html>', $htmlReport->compile());
+    }
+
+    /**
+     * Testing additing tag with inner text
+     */
+    public function testAddTagWithText(): void
+    {
+        // setup
+        $htmlReport = new Html();
+
+        // test body
+        $htmlReport->body()->strong('s');
+
+        // assertions
+        $this->assertEquals('<html><body><strong>s</strong></body></html>', $htmlReport->compile());
     }
 }

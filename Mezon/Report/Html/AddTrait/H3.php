@@ -31,11 +31,13 @@ trait H3
     /**
      * Method adds 'h3' tag to the parent element
      *
+     * @param string $text
+     *            inner text
      * @return Tag\H3 'h3' tag
      */
-    public function h3(): Tag\H3
+    public function h3(string $text = ''): Tag\H3
     {
-        $h3 = new Tag\H3();
+        $h3 = new Tag\H3($text);
 
         $this->addElement($h3);
 

@@ -31,11 +31,13 @@ trait Div
     /**
      * Method adds 'div' tag to the parent element
      *
+     * @param string $text
+     *            inner text
      * @return Tag\Div 'div' tag
      */
-    public function div(): Tag\Div
+    public function div(string $text = ''): Tag\Div
     {
-        $div = new Tag\Div();
+        $div = new Tag\Div($text);
 
         $this->addElement($div);
 

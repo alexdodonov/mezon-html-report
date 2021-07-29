@@ -31,11 +31,13 @@ trait H5
     /**
      * Method adds 'h5' tag to the parent element
      *
+     * @param string $text
+     *            inner text
      * @return Tag\H5 'h5' tag
      */
-    public function h5(): Tag\H5
+    public function h5(string $text = ''): Tag\H5
     {
-        $h5 = new Tag\H5();
+        $h5 = new Tag\H5($text);
 
         $this->addElement($h5);
 
