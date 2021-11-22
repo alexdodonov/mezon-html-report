@@ -1,12 +1,12 @@
 # Mezon HTML report generator
 
-# Pros and cons
+## Pros and cons
 
 Mezon HTML report generator allows you to create reports in a simple and pretty way. This tool also shortens time wich you spend on coding.
 
 This package is a part of [Mezon Framework](https://github.com/alexdodonov/mezon)
 
-# Installation
+## Installation
 
 Just type:
 
@@ -14,7 +14,7 @@ Just type:
 composer require mezon/html-report
 ```
 
-# Usage
+## Usage
 
 Lets start from creating object of the report generator:
 
@@ -36,7 +36,7 @@ $report->body()->div('World!');
 $result = $report->compile();
 ```
 
-# More complex examples
+## More complex examples
 
 This example shows that every call creates new tag (except `html` and `body`). So if you want to add multyple tags then you need to store tag into variable:
 
@@ -54,7 +54,7 @@ $row->td()->innerHtml('#3');
 $row->td()->innerHtml('Aragorn');
 ```
 
-# Supported tags
+## Supported tags
 
 For now you can use following tags:
 
@@ -73,7 +73,7 @@ For now you can use following tags:
 - td
 - tr
 
-# Inner HTML
+## Inner HTML
 
 If you need more tags, you can use innerHtml like in the example below:
 
