@@ -4,8 +4,8 @@ namespace Mezon\Report;
 /**
  * Class ElementsArray
  *
- * @package Mezon
- * @subpackage HtmlReport
+ * @package HtmlReport
+ * @subpackage ElementsArray
  * @author Dodonov A.A.
  * @version v.1.0 (2021/06/25)
  * @copyright Copyright (c) 2021, aeon.org

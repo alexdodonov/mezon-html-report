@@ -2,7 +2,6 @@
 namespace Mezon\Report\Html\Tag;
 
 use Mezon\Report\CompilatorInterface;
-use Mezon\Report\ElementsArray;
 
 /**
  * Class CssProperty
@@ -59,7 +58,7 @@ class CssProperty implements CompilatorInterface
     /**
      *
      * {@inheritdoc}
-     * @see \Mezon\Report\CompilatorInterface::compile()
+     * @see CompilatorInterface::compile()
      */
     public function compile(): string
     {

@@ -2,10 +2,10 @@
 namespace Mezon\Report;
 
 /**
- * Class Html
+ * Interface ReportInterface
  *
- * @package Mezon
- * @subpackage HtmlReport
+ * @package HtmlReport
+ * @subpackage ReportInterface
  * @author Dodonov A.A.
  * @version v.1.0 (2021/06/25)
  * @copyright Copyright (c) 2021, aeon.org

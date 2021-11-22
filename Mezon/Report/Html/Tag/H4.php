@@ -3,6 +3,7 @@ namespace Mezon\Report\Html\Tag;
 
 use Mezon\Report\Html\AddTrait;
 use Mezon\Report\Html\Tag;
+use Mezon\Report\CompilatorInterface;
 
 /**
  * Class H4
@@ -44,7 +45,7 @@ class H4 extends Tag
     /**
      *
      * {@inheritdoc}
-     * @see \Mezon\Report\CompilatorInterface::compile()
+     * @see CompilatorInterface::compile()
      */
     public function compile(): string
     {

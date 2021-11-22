@@ -44,7 +44,7 @@ class Selector extends ElementsArray implements CompilatorInterface
     /**
      *
      * {@inheritdoc}
-     * @see \Mezon\Report\CompilatorInterface::compile()
+     * @see CompilatorInterface::compile()
      */
     public function compile(): string
     {

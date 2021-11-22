@@ -7,8 +7,8 @@ use Mezon\Report\Html\Tag\Head;
 /**
  * Class Html
  *
- * @package Mezon
- * @subpackage HtmlReport
+ * @package HtmlReport
+ * @subpackage Html
  * @author Dodonov A.A.
  * @version v.1.0 (2021/06/25)
  * @copyright Copyright (c) 2021, aeon.org
@@ -65,7 +65,7 @@ class Html implements ReportInterface
     /**
      *
      * {@inheritdoc}
-     * @see \Mezon\Report\ReportInterface::compile()
+     * @see ReportInterface::compile()
      */
     public function compile(): string
     {
