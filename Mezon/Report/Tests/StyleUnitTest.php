@@ -4,6 +4,10 @@ namespace Mezon\Report\Tests;
 use PHPUnit\Framework\TestCase;
 use Mezon\Report\Html;
 
+/**
+ *
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 class StyleUnitTest extends TestCase
 {
 

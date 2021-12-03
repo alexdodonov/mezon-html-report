@@ -4,13 +4,17 @@ namespace Mezon\Report\Tests;
 use PHPUnit\Framework\TestCase;
 use Mezon\Report\Html;
 
+/**
+ *
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 class HeadUnitTest extends TestCase
 {
 
     /**
      * Testing no head constructing
      */
-    public function testNoHead()
+    public function testNoHead(): void
     {
         // setup
         $htmlReport = new Html();
@@ -25,7 +29,7 @@ class HeadUnitTest extends TestCase
     /**
      * Testing single head constructing
      */
-    public function testSingleHead()
+    public function testSingleHead(): void
     {
         // setup
         $htmlReport = new Html();
@@ -41,7 +45,7 @@ class HeadUnitTest extends TestCase
     /**
      * Testing singletone head
      */
-    public function testHeadSingleton()
+    public function testHeadSingleton(): void
     {
         // setup
         $htmlReport = new Html();

@@ -4,13 +4,17 @@ namespace Mezon\Report\Tests;
 use PHPUnit\Framework\TestCase;
 use Mezon\Report\Html;
 
+/**
+ *
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 class BodyUnitTest extends TestCase
 {
 
     /**
      * Testing no body constructing
      */
-    public function testNoBody()
+    public function testNoBody(): void
     {
         // assertions
         $this->expectException(\Exception::class);
@@ -26,7 +30,7 @@ class BodyUnitTest extends TestCase
     /**
      * Testing single body constructing
      */
-    public function testSingleBody()
+    public function testSingleBody(): void
     {
         // setup
         $htmlReport = new Html();
@@ -41,7 +45,7 @@ class BodyUnitTest extends TestCase
     /**
      * Testing singletone body
      */
-    public function testBodySingleton()
+    public function testBodySingleton(): void
     {
         // setup
         $htmlReport = new Html();

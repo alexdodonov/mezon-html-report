@@ -20,16 +20,17 @@ class ElementsArray
     /**
      * Elements of the body
      *
-     * @var array[CompilatorInterface]
+     * @var CompilatorInterface[]
      */
     private $elements = [];
 
     /**
      * Method adds nested element
-     * 
+     *
      * @param CompilatorInterface $element
+     *            element to be added
      */
-    protected function addElement(CompilatorInterface $element)
+    protected function addElement(CompilatorInterface $element): void
     {
         $this->elements[] = $element;
     }
@@ -37,7 +38,7 @@ class ElementsArray
     /**
      * Method returns elements
      *
-     * @return array[CompilatorInterface] elements
+     * @return CompilatorInterface[] elements
      */
     protected function getElements(): array
     {
