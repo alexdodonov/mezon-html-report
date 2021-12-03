@@ -23,14 +23,14 @@ class Html implements ReportInterface
     /**
      * Body element
      *
-     * @var Body
+     * @var ?Body
      */
     private $body = null;
 
     /**
      * Head element
      *
-     * @var Head
+     * @var ?Head
      */
     private $head = null;
 

@@ -21,6 +21,13 @@ use Mezon\Report\CompilatorInterface;
 class H1 extends Tag
 {
     use AddTrait\InnerHtml, AddTrait\Div, AddTrait\P, AddTrait\Strong;
+    
+    /**
+     * Text
+     *
+     * @var string
+     */
+    private $text = '';
 
     /**
      * Constructor
